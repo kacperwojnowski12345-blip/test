@@ -1,0 +1,12 @@
+NOWE ZAPYTANIE O WYCENĘ - ELITEGLAZE KRAKÓW
+
+Imię i nazwisko: Jan Kowalski
+Telefon: 123456789
+Email: jan@example.com
+Usługa: remont_lazienki
+
+OPIS PROJEKTU:
+Potrzebuję remontu łazienki 5m2...
+
+Data zgłoszenia: 2023-10-15, 14:30:00
+Strona: https://twojastrona.pl

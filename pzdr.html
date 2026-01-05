@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EliteGlaze - Profesjonalny Glazurnik Kraków | Układanie Płytek i Remonty</title>
+    <meta name="description" content="Profesjonalny glazurnik Kraków z 10-letnim doświadczeniem. Układanie płytek, gresu, terakoty. Darmowa wycena remontów łazienek i kuchni. Szybki termin realizacji.">
+    <meta name="keywords" content="glazurnik Kraków, układanie płytek Kraków, remont łazienki Kraków, glazurnik, usługi glazurnicze, układanie gresu, płytki łazienkowe, remont kuchni">
+    
+    <!-- MIEJSCE NA KOD ŚLEDZENIA GOOGLE ADS -->
+    <!-- TUTAJ WKLEJ KOD Z GOOGLE ADS -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-TWOJE_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-TWOJE_ID');
+    </script>
+    -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset i podstawy */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Nagłówek i nawigacja */
+        header {
+            background: linear-gradient(135deg, #1a3a5f 0%, #2c5c8a 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #ffd166;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            transition: color 0.3s;
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: #ffd166;
+        }
+        
+        nav ul li a.active {
+            color: #ffd166;
+        }
+        
+        nav ul li a.active::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #ffd166;
+            bottom: -5px;
+            left: 0;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Sekcja hero */
+        .hero {
+            background: linear-gradient(rgba(26, 58, 95, 0.85), rgba(26, 58, 95, 0.9)), url('https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 22px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #ffd166;
+            color: #1a3a5f;
+            padding: 15px 35px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            border: 2px solid #ffd166;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: #ffd166;
+        }
+        
+        /* Call Tracking - numer do kliknięcia */
+        .phone-track {
+            margin-top: 20px;
+        }
+        
+        .phone-button {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 12px 25px;
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            border: 2px solid #28a745;
+        }
+        
+        .phone-button:hover {
+            background-color: transparent;
+            color: #28a745;
+        }
+        
+        /* Sekcje ogólne */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: #1a3a5f;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background-color: #ffd166;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* O nas */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 28px;
+            color: #1a3a5f;
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .experience-badge {
+            display: inline-block;
+            background-color: #1a3a5f;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Realizacje */
+        .portfolio {
+            background-color: #f0f4f8;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .portfolio-item {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .portfolio-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-image img {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-info {
+            padding: 20px;
+        }
+        
+        .portfolio-info h3 {
+            color: #1a3a5f;
+            margin-bottom: 10px;
+        }
+        
+        /* Wycena z formularzem */
+        .estimate {
+            text-align: center;
+        }
+        
+        .estimate-container {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
+        
+        .estimate-info {
+            flex: 1;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        
+        .estimate-form {
+            flex: 1;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        
+        .estimate-info h3, .estimate-form h3 {
+            color: #1a3a5f;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .estimate-info p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+            text-align: left;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .contact-icon {
+            background-color: #1a3a5f;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h4 {
+            color: #1a3a5f;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        
+        /* Formularz */
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #1a3a5f;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e1e5eb;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #1a3a5f;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: #ffd166;
+            color: #1a3a5f;
+            border: none;
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+            border: 2px solid #ffd166;
+        }
+        
+        .submit-btn:hover {
+            background-color: transparent;
+            color: #1a3a5f;
+        }
+        
+        .submit-btn:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+            border-color: #cccccc;
+        }
+        
+        /* Komunikaty formularza */
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .error-message {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .required {
+            color: #dc3545;
+        }
+        
+        /* Stopka */
+        footer {
+            background-color: #1a3a5f;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            color: #ffd166;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #ffd166;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            color: #aaa;
+        }
+        
+        /* Sticky telefon */
+        .sticky-phone {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #28a745;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .sticky-phone:hover {
+            background-color: #218838;
+            transform: scale(1.1);
+        }
+        
+        /* Responsywność */
+        @media (max-width: 992px) {
+            .about-content, .estimate-container {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 40px;
+            }
+            
+            .hero p {
+                font-size: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #1a3a5f;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+                margin-left: 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 30px;
+            }
+            
+            .sticky-phone {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .estimate-info, .estimate-form {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Nagłówek i nawigacja -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Elite<span>Glaze</span></a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="#home" class="active">Strona Główna</a></li>
+                    <li><a href="#about">O Nas</a></li>
+                    <li><a href="#portfolio">Realizacje</a></li>
+                    <li><a href="#estimate">Wycena</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sekcja Hero -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Profesjonalny Glazurnik Kraków</h1>
+            <p><strong>10 lat doświadczenia</strong> w układaniu płytek, gresu i terakoty. Kompleksowe remonty łazienek i kuchni na terenie Krakowa i okolic.</p>
+            <a href="#estimate" class="cta-button">DARMOWA WYCENA ONLINE</a>
+            
+            <div class="phone-track">
+                <p style="font-size: 20px; margin-bottom: 10px;">Lub zadzwoń od razu:</p>
+                <a href="tel:+48123456789" class="phone-button" onclick="trackPhoneCall()">
+                    <i class="fas fa-phone"></i> +48 123 456 789
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja O Nas -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Dlaczego My?</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Glazurnik Kraków z 10-letnim Doświadczeniem</h3>
+                    <p>Jesteśmy <strong>firmą glazurniczą z Krakowa</strong> specjalizującą się w kompleksowym układaniu płytek ceramicznych, gresowych, terakoty i mozaik.</p>
+                    <p>Nasze usługi obejmują: układanie płytek łazienkowych, płytki kuchenne, remonty łazienek Kraków, układanie gresu w salonie, renowacje i nowe inwestycje.</p>
+                    <p><strong>Obsługujemy cały Kraków i okolice:</strong> Śródmieście, Krowodrza, Podgórze, Nowa Huta, Kazimierz, Bronowice i wszystkie dzielnice.</p>
+                    <div class="experience-badge">
+                        <i class="fas fa-award"></i> Ponad 10 lat doświadczenia w Krakowie
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Glazurnik Kraków układanie płytek">
+                </div>
+            </div>
+        </div>
+</section>
+
+    <!-- Sekcja Realizacje -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nasze Realizacje w Krakowie</h2>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Łazienka Kraków glazurnik">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Nowoczesna łazienka w centrum Krakowa</h3>
+                        <p>Kompletny remont łazienki z układaniem płytek ściennych i podłogowych.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Kuchnia Kraków płytki">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Kuchnia z płytkami gresowymi - Podgórze</h3>
+                        <p>Układanie dużoformatowych płytek gresowych w nowoczesnej kuchni.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&auto=format&fit=crop&w-1350&q=80" alt="Salon terakota Kraków">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Salon z terakotą - Nowa Huta</h3>
+                        <p>Układanie terakoty w salonie z niestandardowym wzorem.</p>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 30px; font-style: italic;">Tutaj zdjęcia jak Norek wyśle</p>
+        </div>
+    </section>
+
+    <!-- Sekcja Wycena z formularzem -->
+    <section id="estimate">
+        <div class="container">
+            <div class="section-title">
+                <h2>Darmowa Wycena w Krakowie</h2>
+            </div>
+            
+            <div class="estimate-container">
+                <!-- Lewa kolumna - informacje -->
+                <div class="estimate-info">
+                    <h3>Skontaktuj się po darmową wycenę</h3>
+                    <p>Jako <strong>profesjonalny glazurnik z Krakowa</strong> oferuję bezpłatną wycenę bez zobowiązań. Opisz swój projekt, a ja przygotuję szczegółową ofertę.</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Zadzwoń do glazurnika</h4>
+                                <p><strong><a href="tel:+48123456789" style="color: #1a3a5f; text-decoration: none;" onclick="trackPhoneCall()">+48 123 456 789</a></strong></p>
+                                <p style="font-size: 14px; color: #666;">Od 8:00 do 20:00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Napisz email</h4>
+                                <p><strong>wycenawojfliz@gmail.com</strong></p>
+                                <p style="font-size: 14px; color: #666;">Odpowiadamy w 24h</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Obszar działania</h4>
+                                <p><strong>Kraków i okolice</strong></p>
+                                <p style="font-size: 14px; color: #666;">Dojazd gratis</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Prawa kolumna - formularz -->
+                <div class="estimate-form">
+                    <h3>Formularz wyceny online</h3>
+                    <p>Wypełnij formularz, a przygotuję dla Ciebie wycenę w ciągu 24 godzin.</p>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Imię i nazwisko <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required placeholder="Wpisz swoje imię i nazwisko">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Numer telefonu <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Wpisz swój numer telefonu">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Adres email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="Wpisz swój adres email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Rodzaj usługi</label>
+                            <select id="service" name="service">
+                                <option value="">Wybierz rodzaj usługi</option>
+                                <option value="ukladanie_plytek">Układanie płytek łazienkowych</option>
+                                <option value="ukladanie_gresu">Układanie gresu</option>
+                                <option value="remont_lazienki">Remont łazienki</option>
+                                <option value="remont_kuchni">Remont kuchni</option>
+                                <option value="inne">Inne (napisz w opisie)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Opisz swój projekt <span class="required">*</span></label>
+                            <textarea id="message" name="message" required placeholder="Opisz dokładnie co chcesz zrealizować, podaj wymiary pomieszczenia, rodzaj płytek i inne istotne informacje..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <span id="btnText">Wyślij zapytanie o wycenę</span>
+                            <span id="btnLoading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Wysyłanie...
+                            </span>
+                        </button>
+                    </form>
+                    
+                    <div id="successMessage" class="success-message">
+                        <i class="fas fa-check-circle"></i> Dziękujemy! Twoje zapytanie zostało wysłane. Odpowiemy w ciągu 24 godzin.
+                    </div>
+                    
+                    <div id="errorMessage" class="error-message">
+                        <i class="fas fa-exclamation-circle"></i> Wystąpił błąd podczas wysyłania formularza. Prosimy spróbować ponownie lub zadzwonić.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stopka -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EliteGlaze - Glazurnik Kraków</h3>
+                    <p>Profesjonalne usługi glazurnicze w Krakowie. Układanie płytek, gresu, terakoty. Kompleksowe remonty łazienek i kuchni.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Usługi glazurnicze</h3>
+                    <ul>
+                        <li><a href="#">Układanie płytek łazienkowych</a></li>
+                        <li><a href="#">Układanie gresu Kraków</a></li>
+                        <li><a href="#">Układanie terakoty</a></li>
+                        <li><a href="#">Remonty łazienek Kraków</a></li>
+                        <li><a href="#">Kompleksowe remonty</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Kontakt z glazurnikiem</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+48123456789" style="color: #ddd;">+48 123 456 789</a></li>
+                        <li><i class="fas fa-envelope"></i> wycenawojfliz@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Kraków i okolice</li>
+                        <li><i class="fas fa-clock"></i> Pon-Pt: 8:00-20:00</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 EliteGlaze - Profesjonalny Glazurnik Kraków. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky telefon -->
+    <div class="sticky-phone" onclick="trackPhoneCall()">
+        <i class="fas fa-phone"></i>
+    </div>
+
+    <script>
+        // Obsługa menu mobilnego
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainMenu = document.getElementById('mainMenu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mainMenu.classList.toggle('active');
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Płynne przewijanie do sekcji
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetSection.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                if (mainMenu.classList.contains('active')) {
+                    mainMenu.classList.remove('active');
+                    mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                    mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                }
+            });
+        });
+        
+        // Śledzenie telefonu - dla Google Ads
+        function trackPhoneCall() {
+            // TUTAJ DODAJ KOD ŚLEDZENIA TELEFONU DLA GOOGLE ADS
+            console.log("Telefon kliknięty - śledzenie dla Google Ads");
+            window.location.href = "tel:+48123456789";
+        }
+        
+        // Obsługa formularza
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            const btnLoading = document.getElementById('btnLoading');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+            
+            // Pokaż ładowanie
+            submitBtn.disabled = true;
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline';
+            
+            // Pobierz dane z formularza
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value,
+                date: new Date().toLocaleString('pl-PL'),
+                page: window.location.href
+            };
+            
+            // TWÓJ EMAIL - ZAKTUALIZOWANY
+            const yourEmail = "wycenawojfliz@gmail.com";  // ZAKTUALIZOWANY EMAIL
+            
+            // Przygotuj treść emaila
+            const emailBody = `
+NOWE ZAPYTANIE O WYCENĘ - ELITEGLAZE KRAKÓW
+
+Imię i nazwisko: ${formData.name}
+Telefon: ${formData.phone}
+Email: ${formData.email}
+Usługa: ${formData.service || 'Nie wybrano'}
+
+OPIS PROJEKTU:
+${formData.message}
+
+Data zgłoszenia: ${formData.date}
+Strona: ${formData.page}
+            `;
+            
+            // WYŚLIJ EMAIL PRZEZ FormSubmit.co
+            fetch('https://formsubmit.co/ajax/' + yourEmail, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: formData.name,
+                    phone: formData.phone,
+                    email: formData.email,
+                    service: formData.service,
+                    message: formData.message,
+                    _subject: `🚨 NOWA WYCENA - ${formData.name} (${formData.phone})`,
+                    _replyto: formData.email,
+                    _template: 'table',
+                    _captcha: 'false'
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success === "true") {
+                    // Sukces
+                    successMessage.style.display = 'block';
+                    errorMessage.style.display = 'none';
+                    
+                    // Wyczyść formularz
+                    document.getElementById('contactForm').reset();
+                    
+                    // Śledzenie konwersji dla Google Ads
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'form_submit', {
+                            'event_category': 'Contact',
+                            'event_label': 'Estimate Form'
+                        });
+                    }
+                    
+                    // Log do konsoli
+                    console.log('Formularz wysłany pomyślnie na:', yourEmail);
+                } else {
+                    throw new Error('Błąd wysyłania');
+                }
+            })
+            .catch(error => {
+                // Błąd - pokaż alternatywę
+                errorMessage.style.display = 'block';
+                successMessage.style.display = 'none';
+                console.error('Błąd wysyłania formularza:', error);
+                
+                // Alternatywa: mailto link
+                const mailtoLink = `mailto:${yourEmail}?subject=WYCENA Glazurnik Kraków - ${formData.name}&body=${encodeURIComponent(emailBody)}`;
+                errorMessage.innerHTML = `
+                    <i class="fas fa-exclamation-circle"></i> Wystąpił błąd. 
+                    <a href="${mailtoLink}" style="color: #721c24; text-decoration: underline; font-weight: bold;">
+                        Kliknij tutaj, aby wysłać email ręcznie
+                    </a>
+                `;
+            })
+            .finally(() => {
+                // Przywróć przycisk
+                submitBtn.disabled = false;
+                btnText.style.display = 'inline';
+                btnLoading.style.display = 'none';
+                
+                // Ukryj komunikaty po 10 sekundach
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                    errorMessage.style.display = 'none';
+                }, 10000);
+            });
+        });
+        
+        // Podświetlanie aktywnej sekcji w menu
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav ul li a');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Automatyczne powiadomienie o konfiguracji
+        window.addEventListener('DOMContentLoaded', function() {
+            console.log('✨ Strona EliteGlaze załadowana!');
+            console.log('📧 Formularz skonfigurowany na email:', 'wycenawojfliz@gmail.com');
+            console.log('📱 Telefon:', '+48 123 456 789');
+            console.log('📍 Obszar działania: Kraków i okolice');
+        });
+    </script>
+</body>
+</html>
